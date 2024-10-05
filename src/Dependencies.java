@@ -9,8 +9,9 @@ public class Dependencies {
                 5. go_router
                 6. dio
                 7. file_picker
-                1. awesome_notifications
-                1. awesome_notifications
+                8. intl
+                9. flutter_riverpod
+                10. flex_color_scheme
                 """;
     }
 }
