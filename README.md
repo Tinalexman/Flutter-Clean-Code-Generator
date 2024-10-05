@@ -22,7 +22,7 @@ The `core` folder contains several folders:
 - `database`: This folder contains the configuration for setting up local database
 - `error`: This folder contains the custom error for the app and the handler for handling the errors
 - `extensions`: This folder contains the extensions defined. By default, it contains extensions on `BuidContext`, `DateTime` and `String`
-- `file`: This folder contains file related functions like selecting files, converting files to Uint8List or base64 strings
+- `file`: This folder contains file related functions like selecting files, converting files to `Uint8List` or `base64` strings
 - `functions`: This folder contains app-wide functions including formatting `DateTime` or `num`
 - `navigation`: This folder defines all the pages that can be routed to.
 - `network`: This folder contains all network configurations
