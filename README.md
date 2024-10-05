@@ -13,7 +13,7 @@ You can delete any unneeded file or folder after the tool has finished executing
 
 The tool also assumes that you have certain dependencies installed. The dependencies are listed out when the tool is run. If you do not have those dependencies, you can install them by adding them to your `pubspec.yaml` file and running `flutter pub get`.
 
-Please ensure the project name you use shold match with the one used when running `flutter create`.
+Please ensure the project name you use should match with the one used when running `flutter create`.
 
 
 ## Core
