@@ -1,0 +1,45 @@
+name: flutter_clean_code
+description: "A new Flutter project."
+
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  file_picker:
+  iconsax_plus:
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+
+flutter:
+
+  uses-material-design: true
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: fonts/Nunito-Black.ttf
+        - asset: fonts/Nunito-Black.ttf
+        - asset: fonts/Nunito-ExtraBold.ttf
+        - asset: fonts/Nunito-ExtraLight.ttf
+        - asset: fonts/Nunito-Italic.ttf
+        - asset: fonts/Nunito-Light.ttf
+        - asset: fonts/Nunito-Medium.ttf
+        - asset: fonts/Nunito-Regular.ttf
+        - asset: fonts/Nunito-SemiBold.ttf
+

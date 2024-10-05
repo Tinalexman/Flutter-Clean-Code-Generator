@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Flutter Clean Code Tool.iml" filepath="$PROJECT_DIR$/Flutter Clean Code Tool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flutter_clean_code.iml" filepath="$PROJECT_DIR$/flutter_clean_code.iml" />
     </modules>
   </component>
 </project>
