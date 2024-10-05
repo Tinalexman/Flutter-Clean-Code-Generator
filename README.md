@@ -53,6 +53,7 @@ The `presentation` layer enables separation of UI code and business logic, makin
 - `pages`: Contains screens for the feature.
 - `providers`: State management
 - `widgets`: Reusable widgets specific to this feature.
+- `routes`: List of routes that correspond to each screen in `pages`
 
 
 
