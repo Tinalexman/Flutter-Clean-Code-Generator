@@ -7,7 +7,7 @@ Future<Directory> createDirectory(String path) async {
     target.delete(recursive: true);
   }
 
-  await target.create();
+  await target.create(recursive: true);
   return target;
 }
 
@@ -18,10 +18,17 @@ Future<File> createFile(String path) async {
     target.delete(recursive: true);
   }
 
-  await target.create();
+  await target.create(recursive: true);
   return target;
 }
 
 Future<void> writeToFile(String path, String content) async {
-  await File(path).writeAsString(content, flush: true);
+  File target = File(path);
+  bool exists = await target.exists();
+  if (exists) {
+    target.delete(recursive: true);
+  }
+
+  await target.create(recursive: true);
+  await target.writeAsString(content, flush: true);
 }

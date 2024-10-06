@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 1.0,
         backgroundColor: Colors.blueAccent,
         child: const Icon(
-          IconsaxPlusBroken.add,
+          IconsaxPlusBroken.folder_open,
           color: Colors.white,
           size: 32,
         ),

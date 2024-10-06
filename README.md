@@ -1,19 +1,19 @@
 # Flutter Clean Code Generator
 
-This is a tool that can generate clean architecture for a new Flutter project. The tool should be run after executing `flutter create`.
-The tool creates two main folders in your `lib` folder: `core` and `features`.
+This is a tool that can generate clean architecture for a new Flutter project. `Squeaky Clean` should be run after executing `flutter create`.
+`Squeaky Clean` creates two main folders in your `lib` folder: `core` and `features`.
 
-The `core` folder contains shared resources, utilities, and configurations used across the app. It’s kept separate so it’s reusable and not tied to any particular feature..
+The `core` folder contains shared resources, utilities, and configurations used across the app. It is kept separate so it is reusable and not tied to any particular feature..
 The `feature` folder contains files that perform a specific task.
 
 ## Note
-Please make sure the `core` and `features` do not already exist otherwise, this tool will throw an error.
+Please make sure the `core` and `features` do not already exist otherwise, they will be overwritten. Also ensure that you have not made any modifications to your `main.dart` file as well because it will be overwritten.
 
 You can delete any unneeded file or folder after the tool has finished executing
 
-The tool also assumes that you have certain dependencies installed. The dependencies are listed out when the tool is run. If you do not have those dependencies, you can install them by adding them to your `pubspec.yaml` file and running `flutter pub get`.
+`Squeaky Clean` also assumes that you have certain dependencies installed. The dependencies are listed out when the tool is run. If you do not have those dependencies, you can install them by adding them to your `pubspec.yaml` file and running `flutter pub get`.
 
-Please ensure the project name you use should match with the one used when running `flutter create`.
+Please ensure the project name you specify should match with the one used when running `flutter create`.
 
 
 ## Core

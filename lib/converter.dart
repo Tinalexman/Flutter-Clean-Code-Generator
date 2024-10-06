@@ -135,6 +135,7 @@ class _ConverterState extends State<Converter> {
 
   void goToNextPage() {
     String projectName = projectNameController.text.trim();
+    features.insert(0, "splash");
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (_) => CleanCodeWriter(

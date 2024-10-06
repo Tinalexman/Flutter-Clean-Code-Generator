@@ -1,5 +1,6 @@
 import 'package:flutter_clean_code/file_helpers.dart';
-import 'feature_contents.dart';
+import 'package:flutter_clean_code/res/features/splash.dart';
+import 'package:flutter_clean_code/res/resources.dart';
 
 Future<void> createFeatures(
   String targetDirectory,
@@ -9,6 +10,8 @@ Future<void> createFeatures(
 ) async {
   await createDirectory("$targetDirectory\\features");
   stateCallback("Creating Feature Folder");
+
+  await _createSplashFeature(targetDirectory, projectName, stateCallback);
 
   for (String feature in features) {
     await createDirectory("$targetDirectory\\features\\$feature");
@@ -93,4 +96,32 @@ Future<void> _createRoute(
       "$targetDirectory\\features\\$feature\\presentation\\routes.dart",
       routeContent(projectName, feature));
   stateCallback("Creating routes for $feature");
+}
+
+Future<void> _createSplashRoute(
+  String targetDirectory,
+  String projectName,
+  Function stateCallback,
+) async {
+  await writeToFile(
+      "$targetDirectory\\features\\splash\\presentation\\routes.dart",
+      splashRouteContent(projectName));
+  stateCallback("Creating routes for splash");
+}
+
+Future<void> _createSplashFeature(
+  String targetDirectory,
+  String projectName,
+  Function stateCallback,
+) async {
+  await createDirectory("$targetDirectory\\features\\splash");
+  stateCallback("Creating new feature 'splash'");
+
+  await _createDataFeatures(targetDirectory, "splash", stateCallback);
+  await _createDomainFeatures(targetDirectory, "splash", stateCallback);
+  await _createPresentationFeatures(targetDirectory, "splash", stateCallback);
+  await writeToFile(
+      "$targetDirectory\\features\\splash\\presentation\\pages\\splash.dart",
+      splashContent);
+  await _createSplashRoute(targetDirectory, projectName, stateCallback);
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clean_code/utils.dart';
 import 'package:flutter_clean_code/writers/core.dart';
 import 'package:flutter_clean_code/writers/features.dart';
+import 'package:flutter_clean_code/writers/main.dart';
 
 class CleanCodeWriter extends StatefulWidget {
   final String targetDirectory;
@@ -20,7 +21,6 @@ class CleanCodeWriter extends StatefulWidget {
 }
 
 class _CleanCodeWriterState extends State<CleanCodeWriter> {
-
   String message = "";
   bool done = false;
 
@@ -32,7 +32,9 @@ class _CleanCodeWriterState extends State<CleanCodeWriter> {
 
   Future<void> writeCleanCode() async {
     await createCore(widget.targetDirectory, widget.projectName, updateMessage);
-    await createFeatures(widget.targetDirectory, widget.projectName, widget.features, updateMessage);
+    await createFeatures(widget.targetDirectory, widget.projectName,
+        widget.features, updateMessage);
+    await createMainFile(widget.targetDirectory, widget.projectName, widget.features, updateMessage);
     setState(() => done = true);
   }
 
@@ -67,13 +69,29 @@ class _CleanCodeWriterState extends State<CleanCodeWriter> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
+              if (done)
+              const SizedBox(height: 50),
+              if (done)
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueAccent,
+                    fixedSize: const Size(300, kMinInteractiveDimension),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7.5),
+                    ),
+                  ),
+                  child: Text(
+                    "Go Home",
+                    style: context.textTheme.bodyLarge!.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                )
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: writeCleanCode,
-        child: const Icon(Icons.add),
       ),
     );
   }
